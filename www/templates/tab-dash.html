@@ -1,0 +1,53 @@
+<ion-view view-title="Aberdeen Mosque">
+  <ion-content class="padding">
+    <h3>Date: {{result.item.prayerTime.date  | date :  "dd.MM.y"}}</h3>
+        <div class="row row-center">
+          <div class="col">
+            <h4>Sunrise: {{result.item.prayerTime.sunrise | date :  "shortTime"}}</h4>
+          </div>
+        </div>
+
+      <div class="cards">
+        <div class="item item-divider">Prayer Times</div>
+          <div class="row row-center">
+            <div class="col"><h4>Salat</h4></div>
+            <div class="col"><h4>Start</h4></div>
+            <div class="col"><h4>Jamaa</h4></div>
+        </div>
+        <div class="row row-center">
+            <div class="col">FAJR</div>
+            <div class="col">{{result.item.prayerTime.fajrstart | date :  "shortTime"}}</div>
+            <div class="col">{{result.item.prayerTime.fajrjamaa | date :  "shortTime"}}</div>
+        </div>
+
+        <div class="row row-center">
+            <div class="col">ZUHR</div>
+            <div class="col">{{result.item.prayerTime.zuhrstart | date :  "shortTime"}}</div>
+            <div class="col">{{result.item.prayerTime.zuhrjamaa | date :  "shortTime"}}</div>
+        </div>
+
+        <div class="row row-center">
+            <div class="col">ASR</div>
+            <div class="col">{{result.item.prayerTime.asrstart | date :  "shortTime"}}</div>
+            <div class="col">{{result.item.prayerTime.asrjamaa | date :  "shortTime"}}</div>
+        </div>
+
+
+        <div class="row row-center">
+            <div class="col">MAGHRIB</div>
+            <div class="col">{{result.item.prayerTime.maghrib | date :  "shortTime"}}</div>
+            <div class="col"></div>
+        </div>
+
+
+        <div class="row row-center">
+            <div class="col">ISHA</div>
+            <div class="col">{{result.item.prayerTime.ishastart | date :  "shortTime"}}</div>
+            <div class="col">{{result.item.prayerTime.ishajamaa | date :  "shortTime"}}</div>
+        </div>
+      </div>
+
+
+
+  </ion-content>
+</ion-view>
