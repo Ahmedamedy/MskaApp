@@ -31,6 +31,10 @@ angular.module('starter.controllers', [])
   };
 })
 
+.controller('EventsCtrl', function($scope, $stateParams, Chats) {
+  $scope.events = Events.get($stateParams.eventsId);
+})
+
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
 })

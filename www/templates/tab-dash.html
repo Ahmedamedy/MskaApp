@@ -1,53 +1,73 @@
 <ion-view view-title="Aberdeen Mosque">
+   <ion-nav-title>
+        <img alt="Company Logo" height="30" src="../img/logo.gif"> Aberdeen Mosque
+    </ion-nav-title>
   <ion-content class="padding">
-    <h3>Date: {{result.item.prayerTime.date  | date :  "dd.MM.y"}}</h3>
+    <h4><p class="positive">Today: {{result.item.prayerTime.date  | date :  "fullDate"}}</p></h4>
         <div class="row row-center">
           <div class="col">
-            <h4>Sunrise: {{result.item.prayerTime.sunrise | date :  "shortTime"}}</h4>
+            <h4><p class="energized"><i class="ion-android-sunny"></i>  Sunrise: {{result.item.prayerTime.sunrise | date :  "shortTime"}}</p></h4>
           </div>
         </div>
 
       <div class="cards">
         <div class="item item-divider">Prayer Times</div>
+          <div class="list card">
+          <a>
           <div class="row row-center">
-            <div class="col"><h4>Salat</h4></div>
-            <div class="col"><h4>Start</h4></div>
-            <div class="col"><h4>Jamaa</h4></div>
+            <div class="col"><i class="ion-android-radio-button-on"></i> Salat</div>
+            <div class="col"><h4><p class="balanced"><i class="ion-android-alarm-clock"></i> Start</p></h4></div>
+            <div class="col"><h4> <p class="assertive"><i class="ion-android-contacts"></i>Jamaa</p></h4></div>
         </div>
+        </a>
+
+        <a>
         <div class="row row-center">
             <div class="col">FAJR</div>
-            <div class="col">{{result.item.prayerTime.fajrstart | date :  "shortTime"}}</div>
-            <div class="col">{{result.item.prayerTime.fajrjamaa | date :  "shortTime"}}</div>
+            <div class="col"><p class="balanced">{{result.item.prayerTime.fajrstart | date :  "shortTime"}}</p></div>
+            <div class="col"><p class="assertive">{{result.item.prayerTime.fajrjamaa | date :  "shortTime"}}</p></div>
         </div>
+       </a>
 
+       <a>
         <div class="row row-center">
             <div class="col">ZUHR</div>
-            <div class="col">{{result.item.prayerTime.zuhrstart | date :  "shortTime"}}</div>
-            <div class="col">{{result.item.prayerTime.zuhrjamaa | date :  "shortTime"}}</div>
+            <div class="col"><p class="balanced">{{result.item.prayerTime.zuhrstart | date :  "shortTime"}}</p></div>
+            <div class="col"><p class="assertive">{{result.item.prayerTime.zuhrjamaa | date :  "shortTime"}}</p></div>
         </div>
+        </a>
 
+        <a>
         <div class="row row-center">
             <div class="col">ASR</div>
-            <div class="col">{{result.item.prayerTime.asrstart | date :  "shortTime"}}</div>
-            <div class="col">{{result.item.prayerTime.asrjamaa | date :  "shortTime"}}</div>
+            <div class="col"><p class="balanced">{{result.item.prayerTime.asrstart | date :  "shortTime"}}</p></div>
+            <div class="col"><p class="assertive">{{result.item.prayerTime.asrjamaa | date :  "shortTime"}}</p></div>
         </div>
+        </a>
 
-
+        <a>
         <div class="row row-center">
             <div class="col">MAGHRIB</div>
-            <div class="col">{{result.item.prayerTime.maghrib | date :  "shortTime"}}</div>
+            <div class="col"><p class="balanced">{{result.item.prayerTime.maghrib | date :  "shortTime"}}</p></div>
             <div class="col"></div>
         </div>
+        </a>
 
-
+        <a>
         <div class="row row-center">
             <div class="col">ISHA</div>
-            <div class="col">{{result.item.prayerTime.ishastart | date :  "shortTime"}}</div>
-            <div class="col">{{result.item.prayerTime.ishajamaa | date :  "shortTime"}}</div>
+            <div class="col"><p class="balanced">{{result.item.prayerTime.ishastart | date :  "shortTime"}}</p></div>
+            <div class="col"><p class="assertive">{{result.item.prayerTime.ishajamaa | date :  "shortTime"}}</p></div>
         </div>
+        </a>
+        <div class="row row-center">
+          <div class="col">
+            <h4><div class="col"><p class="energized">Next Friday Khutba Starts at: {{result.item.fridayTime | date :  "shortTime"}}</p></h4>
+          </div>
       </div>
-
-
-
+      
+      
+        </div>
+        </div>
   </ion-content>
 </ion-view>
